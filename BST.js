@@ -1,4 +1,4 @@
-class BST {
+class BinarySearchTree {
     constructor(key = null, value = null, parent = null) {
         this.key = key;
         this.value = value;
@@ -145,4 +145,4 @@ class BST {
 
 }
 
-module.exports = BST
+module.exports = BinarySearchTree

@@ -1,15 +1,15 @@
 const BinarySearchTree = require('./BST')
 
 const BST = new BinarySearchTree()
-//function drawBST() { 
-let data = [3,1,4,6,9,2,5,7]
-    //let data = [5,1,4,6,9,2,7]
-data.forEach(x => BST.insert(x, `value = ${x}`))
-    //return BST
-//}
 
-//drawBST()
-//console.log('draw', BST)
+function drawBST() { 
+  let data = [3,1,4,6,9,2,5,7]
+  // let data = [5,1,4,6,9,2,7]
+  data.forEach(x => BST.insert(x, x))
+  return BST
+}
+//console.log(drawBST())
+
 
 function heightOfBST(bst) {
     let leftHeight = 0;
@@ -26,11 +26,8 @@ function heightOfBST(bst) {
       }
     }
 }
+// console.log(heightOfBST(drawBST()))
 
-console.log(BST)
-//const getHeight = heightOfBST(BST)
-//console.log(getHeight)
-//console.log(heightOfBST(drawBST()))
 
 function bst_height1(tree) {
     return (
@@ -40,8 +37,8 @@ function bst_height1(tree) {
       ) + 1
     );
 }
+// console.log(bst_height1(drawBST()))
 
-//console.log(bst_height1(drawBST()))
 
 function bst_height2(tree) {
     if (tree.left && tree.right)
@@ -50,8 +47,7 @@ function bst_height2(tree) {
     if (tree.right) return bst_height2(tree.right) + 1;
     return 1;
 }
-
-//console.log(bst_height2(drawBST()))
+// console.log(bst_height2(drawBST()))
 
 
 function isItBSTree(tree) {
@@ -74,8 +70,7 @@ function isItBSTree(tree) {
     }
     return true
 }
-
-//console.log(isItBSTree(drawBST()))
+// console.log(isItBSTree(drawBST()))
 
 
 function findThirdNode(tree) {
@@ -92,6 +87,5 @@ function findThirdNode(tree) {
     //   return findThirdNode(tree.right);
     // } else return tree.key;
 }
-
-console.log(findThirdNode(BST))
+// console.log(findThirdNode(BST))
 //console.log(BST.right)
